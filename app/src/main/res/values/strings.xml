@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">DataRegisterUI</string>
+    <string-array name="country">
+        <item>America</item>
+        <item>Belgium</item>
+        <item>Canada</item>
+        <item>England</item>
+        <item>Poland</item>
+    </string-array>
+    <string name="Title">Please Input Some Data</string>
+    <string name="data1">Name</string>
+    <string name="data2">Email</string>
+    <string name="data3">Password</string>
+    <string name="data4">Re-Entry Password</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="country">Country</string>
+    <string name="submit">Submit</string>
+    <string name="warning">Please input this field</string>
+
+</resources>

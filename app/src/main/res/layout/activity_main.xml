@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/Title"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/formLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txtTitle"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="80dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/warningName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/warning"
+                android:textColor="@color/red"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/data1" />
+
+            <TextView
+                android:id="@+id/warningMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/warning"
+                android:textColor="@color/red"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/editMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/data2"
+                android:inputType="textEmailAddress"/>
+
+            <TextView
+                android:id="@+id/warningPass1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/warning"
+                android:textColor="@color/red"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/editPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/data3"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/warningPass2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/warning"
+                android:textColor="@color/red"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/editRe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/data4"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/formLayout"
+            android:layout_centerInParent="true"
+            android:layout_margin="15dp"
+            android:text="@string/gender"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtGender"
+            android:layout_centerInParent="true">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/countryLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gender"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/country"
+                android:textStyle="bold" />
+
+
+            <Spinner
+                android:id="@+id/countrySpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/country"
+                android:entries="@array/country" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/agreeCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/countryLayout"
+            android:layout_margin="15dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            android:textSize="8sp" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/agreeCheck"
+            android:layout_margin="15dp"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/submit" />
+
+    </RelativeLayout>
+</ScrollView>
